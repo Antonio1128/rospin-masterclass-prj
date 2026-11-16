@@ -43,7 +43,28 @@ It opens at http://localhost:8501 and currently shows 10 fictitious buildings fr
 
 ## Data contract
 
-Every building is a GeoJSON Feature with the fields in [docs/schema.md](docs/schema.md). Fields that are not computed yet are `null`, and the app must handle that. Geometry is stored in EPSG:4326; areas and distances are computed in EPSG:32637.
+Every building is a GeoJSON Feature (Polygon) with these properties. Fields that are not computed yet are `null`, and the app must handle that. Geometry is stored in EPSG:4326; areas and distances are computed in EPSG:32637.
+
+| Field | Type | Example | Filled by | Step |
+|---|---|---|---|---|
+| building_id | string | osm_123456 | Iarina | 2 |
+| area_m2 | number | 1250 | Iarina | 2 |
+| levels | integer | 9 | Iarina | 2 |
+| height_m | number | 27.0 | Iarina | 2 |
+| epoch | string | 1975-1990 | Iarina | 2 |
+| typology | string | panel_block | Iarina | 6 |
+| vuln_score | number 0-1 | 0.6 | Iarina | 6 |
+| damage_score | number 0-1 | 0.82 | Diana | 3 |
+| unosat_label | string | destroyed | Diana | 4 |
+| insar_disp_mm | number | -7.5 | Iarina | 5 |
+| insar_n_points | integer | 14 | Iarina | 5 |
+| exposure_score | number 0-1 | 0.4 | Iarina | 6 |
+| triage_status | red / orange / yellow / green | red | Diana + Iarina | 6 |
+| cost_estimate_usd | number | 1850000 | Iarina | 6 |
+
+Triage colours: red = destroyed, orange = standing but moving or highly exposed (priority inspection), yellow = near hit areas (monitor), green = no signs.
+
+The same table, with more detail, lives in [docs/schema.md](docs/schema.md). Keep both in sync when a field changes.
 
 ## Tests
 
