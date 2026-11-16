@@ -1,0 +1,466 @@
+{
+ "type": "FeatureCollection",
+ "name": "buildings_fake",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "building_id": "osm_100001",
+    "area_m2": 1250,
+    "levels": 9,
+    "height_m": 27.0,
+    "epoch": "1975-1990",
+    "typology": "panel_block",
+    "vuln_score": 0.6,
+    "damage_score": 0.91,
+    "unosat_label": "destroyed",
+    "insar_disp_mm": null,
+    "insar_n_points": null,
+    "exposure_score": 0.8,
+    "triage_status": "red",
+    "cost_estimate_usd": 1850000
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       36.33021,
+       50.030136
+      ],
+      [
+       36.330835,
+       50.030136
+      ],
+      [
+       36.330835,
+       50.030388
+      ],
+      [
+       36.33021,
+       50.030388
+      ],
+      [
+       36.33021,
+       50.030136
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "building_id": "osm_100002",
+    "area_m2": 980,
+    "levels": 5,
+    "height_m": 15.0,
+    "epoch": "1960-1975",
+    "typology": "brick_block",
+    "vuln_score": 0.55,
+    "damage_score": 0.86,
+    "unosat_label": "destroyed",
+    "insar_disp_mm": null,
+    "insar_n_points": null,
+    "exposure_score": 0.75,
+    "triage_status": "red",
+    "cost_estimate_usd": 1120000
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       36.331468,
+       50.030136
+      ],
+      [
+       36.332022,
+       50.030136
+      ],
+      [
+       36.332022,
+       50.030359
+      ],
+      [
+       36.331468,
+       50.030359
+      ],
+      [
+       36.331468,
+       50.030136
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "building_id": "osm_100003",
+    "area_m2": 1420,
+    "levels": 9,
+    "height_m": 27.5,
+    "epoch": "1975-1990",
+    "typology": "panel_block",
+    "vuln_score": 0.6,
+    "damage_score": 0.38,
+    "unosat_label": "severe",
+    "insar_disp_mm": -7.5,
+    "insar_n_points": 14,
+    "exposure_score": 0.7,
+    "triage_status": "orange",
+    "cost_estimate_usd": 640000
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       36.332727,
+       50.030136
+      ],
+      [
+       36.333393,
+       50.030136
+      ],
+      [
+       36.333393,
+       50.030405
+      ],
+      [
+       36.332727,
+       50.030405
+      ],
+      [
+       36.332727,
+       50.030136
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "building_id": "osm_100004",
+    "area_m2": 760,
+    "levels": 5,
+    "height_m": 15.0,
+    "epoch": "1960-1975",
+    "typology": "brick_block",
+    "vuln_score": 0.55,
+    "damage_score": 0.33,
+    "unosat_label": "moderate",
+    "insar_disp_mm": -4.2,
+    "insar_n_points": 9,
+    "exposure_score": 0.6,
+    "triage_status": "orange",
+    "cost_estimate_usd": 310000
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       36.333985,
+       50.030136
+      ],
+      [
+       36.334473,
+       50.030136
+      ],
+      [
+       36.334473,
+       50.030333
+      ],
+      [
+       36.333985,
+       50.030333
+      ],
+      [
+       36.333985,
+       50.030136
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "building_id": "osm_100005",
+    "area_m2": 2100,
+    "levels": 16,
+    "height_m": 48.0,
+    "epoch": "1990-2010",
+    "typology": "new_concrete",
+    "vuln_score": 0.3,
+    "damage_score": 0.22,
+    "unosat_label": null,
+    "insar_disp_mm": 1.1,
+    "insar_n_points": 22,
+    "exposure_score": 0.55,
+    "triage_status": "yellow",
+    "cost_estimate_usd": 0
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       36.335244,
+       50.030136
+      ],
+      [
+       36.336055,
+       50.030136
+      ],
+      [
+       36.336055,
+       50.030463
+      ],
+      [
+       36.335244,
+       50.030463
+      ],
+      [
+       36.335244,
+       50.030136
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "building_id": "osm_100006",
+    "area_m2": 540,
+    "levels": 3,
+    "height_m": 9.0,
+    "epoch": "1945-1960",
+    "typology": "brick_block",
+    "vuln_score": 0.7,
+    "damage_score": 0.18,
+    "unosat_label": null,
+    "insar_disp_mm": null,
+    "insar_n_points": null,
+    "exposure_score": 0.45,
+    "triage_status": "yellow",
+    "cost_estimate_usd": 0
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       36.33021,
+       50.03095
+      ],
+      [
+       36.330621,
+       50.03095
+      ],
+      [
+       36.330621,
+       50.031116
+      ],
+      [
+       36.33021,
+       50.031116
+      ],
+      [
+       36.33021,
+       50.03095
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "building_id": "osm_100007",
+    "area_m2": 1100,
+    "levels": 9,
+    "height_m": 27.0,
+    "epoch": "1975-1990",
+    "typology": "panel_block",
+    "vuln_score": 0.6,
+    "damage_score": 0.12,
+    "unosat_label": "no_visible_damage",
+    "insar_disp_mm": 0.4,
+    "insar_n_points": 17,
+    "exposure_score": 0.2,
+    "triage_status": "green",
+    "cost_estimate_usd": 0
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       36.331468,
+       50.03095
+      ],
+      [
+       36.332055,
+       50.03095
+      ],
+      [
+       36.332055,
+       50.031187
+      ],
+      [
+       36.331468,
+       50.031187
+      ],
+      [
+       36.331468,
+       50.03095
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "building_id": "osm_100008",
+    "area_m2": 3200,
+    "levels": 2,
+    "height_m": 8.0,
+    "epoch": "1990-2010",
+    "typology": "warehouse",
+    "vuln_score": 0.4,
+    "damage_score": 0.09,
+    "unosat_label": null,
+    "insar_disp_mm": null,
+    "insar_n_points": null,
+    "exposure_score": 0.1,
+    "triage_status": "green",
+    "cost_estimate_usd": 0
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       36.332727,
+       50.03095
+      ],
+      [
+       36.333727,
+       50.03095
+      ],
+      [
+       36.333727,
+       50.031354
+      ],
+      [
+       36.332727,
+       50.031354
+      ],
+      [
+       36.332727,
+       50.03095
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "building_id": "osm_100009",
+    "area_m2": 870,
+    "levels": 5,
+    "height_m": 15.0,
+    "epoch": "1960-1975",
+    "typology": "brick_block",
+    "vuln_score": 0.55,
+    "damage_score": null,
+    "unosat_label": null,
+    "insar_disp_mm": null,
+    "insar_n_points": null,
+    "exposure_score": null,
+    "triage_status": null,
+    "cost_estimate_usd": null
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       36.333985,
+       50.03095
+      ],
+      [
+       36.334507,
+       50.03095
+      ],
+      [
+       36.334507,
+       50.03116
+      ],
+      [
+       36.333985,
+       50.03116
+      ],
+      [
+       36.333985,
+       50.03095
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "building_id": "osm_100010",
+    "area_m2": 1650,
+    "levels": 12,
+    "height_m": 36.0,
+    "epoch": "2010-2022",
+    "typology": "new_concrete",
+    "vuln_score": 0.25,
+    "damage_score": 0.07,
+    "unosat_label": "no_visible_damage",
+    "insar_disp_mm": -0.3,
+    "insar_n_points": 25,
+    "exposure_score": 0.05,
+    "triage_status": "green",
+    "cost_estimate_usd": 0
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       36.335244,
+       50.03095
+      ],
+      [
+       36.335962,
+       50.03095
+      ],
+      [
+       36.335962,
+       50.03124
+      ],
+      [
+       36.335244,
+       50.03124
+      ],
+      [
+       36.335244,
+       50.03095
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

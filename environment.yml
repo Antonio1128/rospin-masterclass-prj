@@ -1,0 +1,12 @@
+name: eo
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - jupyterlab
+  - rasterio
+  - geopandas
+  - matplotlib
+  - gdal
+  - earthengine-api
+  - geemap
