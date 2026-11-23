@@ -41,6 +41,14 @@ streamlit run app/main.py
 
 It opens at http://localhost:8501 and currently shows 10 fictitious buildings from `tests/fixtures/buildings_fake.geojson`. Click a building to see its card, and use the sidebar to filter by triage colour.
 
+## Run the pipeline
+
+```
+python -m pipeline.run_all
+```
+
+Runs steps 02 to 06 in order and writes `data/buildings.geojson`. Each step is a module in `pipeline/` with a `run(buildings)` function that takes the buildings table and returns it with its fields filled in. Step 02 reads `data/osm/buildings_final.geojson`, keeps buildings of at least 400 m2 and converts them to the schema. Steps 03 to 06 pass the data through unchanged until Data/AI delivers them, and their fields stay `null`.
+
 ## Data contract
 
 Every building is a GeoJSON Feature (Polygon) with these properties. Fields that are not computed yet are `null`, and the app must handle that. Geometry is stored in EPSG:4326; areas and distances are computed in EPSG:32637.
@@ -84,6 +92,6 @@ pytest
 |---|---|
 | Repo structure, schema, fake sample data | Done |
 | Streamlit map on fake data | Done |
-| Pipeline steps 01-06 | Stubs only |
-| Real buildings and damage scores | Not started |
+| Pipeline runner and step 02 (real Kharkiv buildings, 15,811 above 400 m2) | Done |
+| Pipeline steps 03-06 (damage, validation, InSAR, triage) | Pass-through, waiting for Data/AI |
 | Online deploy, export, "Data and limitations" page | Not started |
