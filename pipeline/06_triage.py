@@ -1,6 +1,5 @@
-def main():
-    raise NotImplementedError
+from pipeline.common import ensure_schema
 
 
-if __name__ == "__main__":
-    main()
+def run(buildings):
+    return ensure_schema(buildings)
