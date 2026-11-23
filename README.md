@@ -23,7 +23,7 @@ Python 3.11.
 pip install -r requirements.txt
 ```
 
-Copy your keys into a `.env` file in the project root (it is gitignored). `EARTHDATA_*` is only needed for the InSAR step:
+You do not need any keys to run the app or the pipeline as it is now. Keys are only needed to regenerate the satellite results: step 03 (PWTT on Earth Engine) needs `GEE_PROJECT`, and step 05 (InSAR on ASF HyP3) needs the Earthdata login. In that case put them in a `.env` file in the project root (it is gitignored):
 
 ```
 GEE_PROJECT=your-earth-engine-project
