@@ -5,7 +5,7 @@ import pandas as pd
 
 from pipeline.common import DATA, METRIC_CRS, ensure_schema
 
-RAW = DATA / "osm" / "buildings_final.geojson"
+RAW = DATA / "in_use" / "buildings_osm_ghsl.geojson"
 MIN_AREA_M2 = 400
 METERS_PER_LEVEL = 3
 
@@ -25,11 +25,15 @@ def clean_epoch(value):
     return None
 
 
+def ghsl_height(raw):
+    height = pd.to_numeric(raw["ghsl_anbh_mean"], errors="coerce")
+    return height.where(height > 0)
+
+
 def resolve_levels(raw):
     levels = pd.to_numeric(raw["levels"], errors="coerce")
-    tagged = pd.to_numeric(raw["building:levels"], errors="coerce")
-    from_height = pd.to_numeric(raw["ghsl_height_m"], errors="coerce") / METERS_PER_LEVEL
-    return levels.fillna(tagged).fillna(from_height).round().clip(lower=1).astype("Int64")
+    from_height = ghsl_height(raw) / METERS_PER_LEVEL
+    return levels.fillna(from_height).round().clip(lower=1).astype("Int64")
 
 
 def to_polygon(geometry):
@@ -48,8 +52,8 @@ def adapt(raw):
             "building_id": "osm_" + raw["building_id"].astype(str),
             "area_m2": area.round(1),
             "levels": resolve_levels(raw),
-            "height_m": pd.to_numeric(raw["ghsl_height_m"], errors="coerce").round(1),
-            "epoch": raw["ghsl_epoca_perioada"].map(clean_epoch),
+            "height_m": ghsl_height(raw).round(1),
+            "epoch": raw["ghsl_age_period"].map(clean_epoch),
         },
         geometry=raw.geometry.map(to_polygon),
         crs=raw.crs,
