@@ -2,7 +2,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-OUTPUT = DATA / "buildings.geojson"
+OUTPUT = DATA / "output" / "buildings.geojson"
 
 WEB_CRS = 4326
 METRIC_CRS = 32637

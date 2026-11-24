@@ -6,20 +6,20 @@ Geometry is stored in EPSG:4326. Areas and distances are computed in EPSG:32637 
 
 | Field | Type | Example | Filled by | Pipeline step |
 |---|---|---|---|---|
-| building_id | string | osm_123456 | Iarina | 2 |
-| area_m2 | number | 1250 | Iarina | 2 |
-| levels | integer | 9 | Iarina | 2 |
-| height_m | number | 27.0 | Iarina | 2 |
-| epoch | string | 1975-1990 | Iarina | 2 |
-| typology | string | panel_block | Iarina | 6 |
-| vuln_score | number 0-1 | 0.6 | Iarina | 6 |
-| damage_score | number 0-1 | 0.82 | Diana | 3 |
-| unosat_label | string | destroyed | Diana | 4 |
-| insar_disp_mm | number | -7.5 | Iarina | 5 |
-| insar_n_points | integer | 14 | Iarina | 5 |
-| exposure_score | number 0-1 | 0.4 | Iarina | 6 |
-| triage_status | red / orange / yellow / green | red | Diana + Iarina | 6 |
-| cost_estimate_usd | number | 1850000 | Iarina | 6 |
+| building_id | string | osm_123456 | Data/AI | 2 |
+| area_m2 | number | 1250 | Data/AI | 2 |
+| levels | integer | 9 | Data/AI | 2 |
+| height_m | number | 27.0 | Data/AI | 2 |
+| epoch | string | 1975-1990 | Data/AI | 2 |
+| typology | string | panel_block | Data/AI | 6 |
+| vuln_score | number 0-1 | 0.6 | Data/AI | 6 |
+| damage_score | number 0-1 | 0.82 | Data/AI | 3 |
+| unosat_label | string | destroyed | Data/AI | 4 |
+| insar_disp_mm | number | -7.5 | Data/AI | 5 |
+| insar_n_points | integer | 14 | Data/AI | 5 |
+| exposure_score | number 0-1 | 0.4 | Data/AI | 6 |
+| triage_status | red / orange / yellow / green | red | Data/AI | 6 |
+| cost_estimate_usd | number | 1850000 | Data/AI | 6 |
 
 ## Triage status
 

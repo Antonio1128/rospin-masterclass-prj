@@ -47,9 +47,9 @@ It opens at http://localhost:8501 and currently shows 10 fictitious buildings fr
 python -m pipeline.run_all
 ```
 
-Runs steps 02 to 06 in order and writes `data/buildings.geojson`. Each step is a module in `pipeline/` with a `run(buildings)` function that takes the buildings table and returns it with its fields filled in. Step 02 reads `data/osm/buildings_final.geojson`, keeps buildings of at least 400 m2 and converts them to the schema. Step 03 reads `data/saltivka_pwtt_10m.tif` and sets `damage_score` to the 90th percentile of the PWTT pixels inside each building, divided by 6 and clipped to 0-1. The divisor is provisional until Data/AI confirms the scale and threshold. Buildings outside the raster keep `damage_score` as `null`. Steps 04 to 06 pass the data through unchanged for now, and their fields stay `null`.
+Runs steps 02 to 06 in order and writes `data/output/buildings.geojson`. Each step is a module in `pipeline/` with a `run(buildings)` function that takes the buildings table and returns it with its fields filled in. Step 02 reads `data/in_use/buildings_osm_ghsl.geojson`, keeps buildings of at least 400 m2 and converts them to the schema. Height and epoch come from GHSL (a height of 0 counts as missing); levels fall back to the GHSL height divided by 3. The epoch is the dominant one of the GHSL cell, not the age of the building. Step 03 reads `data/in_use/pwtt_raster_saltivka_10m.tif` and sets `damage_score` to the 90th percentile of the PWTT pixels inside each building, divided by 6 and clipped to 0-1. The divisor is provisional until Data/AI confirms the scale and threshold. Buildings outside the raster keep `damage_score` as `null`. Steps 04 to 06 pass the data through unchanged for now, and their fields stay `null`.
 
-If `data/buildings.geojson` is open in QGIS the run fails when writing it. Close the layer first.
+If `data/output/buildings.geojson` is open in QGIS the run fails when writing it. Close the layer first.
 
 ## Data contract
 
@@ -57,20 +57,20 @@ Every building is a GeoJSON Feature (Polygon) with these properties. Fields that
 
 | Field | Type | Example | Filled by | Step |
 |---|---|---|---|---|
-| building_id | string | osm_123456 | Iarina | 2 |
-| area_m2 | number | 1250 | Iarina | 2 |
-| levels | integer | 9 | Iarina | 2 |
-| height_m | number | 27.0 | Iarina | 2 |
-| epoch | string | 1975-1990 | Iarina | 2 |
-| typology | string | panel_block | Iarina | 6 |
-| vuln_score | number 0-1 | 0.6 | Iarina | 6 |
-| damage_score | number 0-1 | 0.82 | Diana | 3 |
-| unosat_label | string | destroyed | Diana | 4 |
-| insar_disp_mm | number | -7.5 | Iarina | 5 |
-| insar_n_points | integer | 14 | Iarina | 5 |
-| exposure_score | number 0-1 | 0.4 | Iarina | 6 |
-| triage_status | red / orange / yellow / green | red | Diana + Iarina | 6 |
-| cost_estimate_usd | number | 1850000 | Iarina | 6 |
+| building_id | string | osm_123456 | Data/AI | 2 |
+| area_m2 | number | 1250 | Data/AI | 2 |
+| levels | integer | 9 | Data/AI | 2 |
+| height_m | number | 27.0 | Data/AI | 2 |
+| epoch | string | 1975-1990 | Data/AI | 2 |
+| typology | string | panel_block | Data/AI | 6 |
+| vuln_score | number 0-1 | 0.6 | Data/AI | 6 |
+| damage_score | number 0-1 | 0.82 | Data/AI | 3 |
+| unosat_label | string | destroyed | Data/AI | 4 |
+| insar_disp_mm | number | -7.5 | Data/AI | 5 |
+| insar_n_points | integer | 14 | Data/AI | 5 |
+| exposure_score | number 0-1 | 0.4 | Data/AI | 6 |
+| triage_status | red / orange / yellow / green | red | Data/AI | 6 |
+| cost_estimate_usd | number | 1850000 | Data/AI | 6 |
 
 Triage colours: red = destroyed, orange = standing but moving or highly exposed (priority inspection), yellow = near hit areas (monitor), green = no signs.
 

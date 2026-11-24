@@ -4,7 +4,7 @@ from rasterio.mask import mask
 
 from pipeline.common import DATA, ensure_schema
 
-RASTER = DATA / "saltivka_pwtt_10m.tif"
+RASTER = DATA / "in_use" / "pwtt_raster_saltivka_10m.tif"
 PERCENTILE = 90
 SCORE_AT_FULL_DAMAGE = 6.0
 
