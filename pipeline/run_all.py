@@ -2,7 +2,7 @@ import importlib
 
 from pipeline.common import OUTPUT, write
 
-STEPS = ["02_buildings", "03_damage", "04_validate", "05_insar", "06_triage"]
+STEPS = ["02_buildings", "03_damage", "04_validate", "05_triage"]
 
 
 def main():

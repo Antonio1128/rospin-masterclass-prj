@@ -5,7 +5,7 @@ import folium
 import streamlit as st
 from streamlit_folium import st_folium
 
-DATA = Path(__file__).resolve().parent.parent / "tests" / "fixtures" / "buildings_fake.geojson"
+DATA = Path(__file__).resolve().parent.parent / "data" / "output" / "buildings.geojson"
 COLORS = {
     "red": "#d73027",
     "orange": "#fc8d59",
@@ -31,8 +31,6 @@ FIELDS = [
     ("vuln_score", "Vulnerability"),
     ("damage_score", "Damage score"),
     ("unosat_label", "UNOSAT label"),
-    ("insar_disp_mm", "InSAR displacement (mm)"),
-    ("insar_n_points", "InSAR points"),
     ("exposure_score", "Exposure"),
     ("cost_estimate_usd", "Cost estimate (USD)"),
 ]
@@ -52,10 +50,10 @@ def build_map(collection):
     feats = collection["features"]
     lons = [c[0] for f in feats for c in f["geometry"]["coordinates"][0]]
     lats = [c[1] for f in feats for c in f["geometry"]["coordinates"][0]]
-    m = folium.Map(
-        location=[sum(lats) / len(lats), sum(lons) / len(lons)],
-        zoom_start=17,
-        tiles="OpenStreetMap",
+    m = folium.Map(tiles="OpenStreetMap")
+    m.fit_bounds(
+        [[min(lats), min(lons)], [max(lats), max(lons)]],
+        padding=(20, 20),
     )
     folium.GeoJson(
         {"type": "FeatureCollection", "features": feats},
@@ -85,6 +83,9 @@ def main():
         for f in collection["features"]
         if (f["properties"]["triage_status"] or "none") in chosen
     ]
+    if not feats:
+        st.info("Nicio clădire nu corespunde filtrelor selectate.")
+        return
     left, right = st.columns([3, 1])
     with left:
         result = st_folium(

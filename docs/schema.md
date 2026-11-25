@@ -11,22 +11,20 @@ Geometry is stored in EPSG:4326. Areas and distances are computed in EPSG:32637 
 | levels | integer | 9 | Data/AI | 2 |
 | height_m | number | 27.0 | Data/AI | 2 |
 | epoch | string | 1975-1990 | Data/AI | 2 |
-| typology | string | panel_block | Data/AI | 6 |
-| vuln_score | number 0-1 | 0.6 | Data/AI | 6 |
+| typology | string | panel_block | Data/AI | 5 |
+| vuln_score | number 0-1 | 0.6 | Data/AI | 5 |
 | damage_score | number 0-1 | 0.82 | Data/AI | 3 |
 | unosat_label | string | destroyed | Data/AI | 4 |
-| insar_disp_mm | number | -7.5 | Data/AI | 5 |
-| insar_n_points | integer | 14 | Data/AI | 5 |
-| exposure_score | number 0-1 | 0.4 | Data/AI | 6 |
-| triage_status | red / orange / yellow / green | red | Data/AI | 6 |
-| cost_estimate_usd | number | 1850000 | Data/AI | 6 |
+| exposure_score | number 0-1 | 0.4 | Data/AI | 5 |
+| triage_status | red / orange / yellow / green | red | Data/AI | 5 |
+| cost_estimate_usd | number | 1850000 | Data/AI | 5 |
 
 ## Triage status
 
 | Value | Meaning | Action |
 |---|---|---|
 | red | Destroyed | Nobody enters |
-| orange | Standing, but moving or highly exposed | Priority inspection |
+| orange | Standing and highly exposed | Priority inspection |
 | yellow | Near hit areas, no direct signs | Monitor |
 | green | No signs | Nothing urgent |
 

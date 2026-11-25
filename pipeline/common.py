@@ -17,8 +17,6 @@ SCHEMA_FIELDS = [
     "vuln_score",
     "damage_score",
     "unosat_label",
-    "insar_disp_mm",
-    "insar_n_points",
     "exposure_score",
     "triage_status",
     "cost_estimate_usd",
