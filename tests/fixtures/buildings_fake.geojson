@@ -14,8 +14,6 @@
     "vuln_score": 0.6,
     "damage_score": 0.91,
     "unosat_label": "destroyed",
-    "insar_disp_mm": null,
-    "insar_n_points": null,
     "exposure_score": 0.8,
     "triage_status": "red",
     "cost_estimate_usd": 1850000
@@ -60,8 +58,6 @@
     "vuln_score": 0.55,
     "damage_score": 0.86,
     "unosat_label": "destroyed",
-    "insar_disp_mm": null,
-    "insar_n_points": null,
     "exposure_score": 0.75,
     "triage_status": "red",
     "cost_estimate_usd": 1120000
@@ -106,8 +102,6 @@
     "vuln_score": 0.6,
     "damage_score": 0.38,
     "unosat_label": "severe",
-    "insar_disp_mm": -7.5,
-    "insar_n_points": 14,
     "exposure_score": 0.7,
     "triage_status": "orange",
     "cost_estimate_usd": 640000
@@ -152,8 +146,6 @@
     "vuln_score": 0.55,
     "damage_score": 0.33,
     "unosat_label": "moderate",
-    "insar_disp_mm": -4.2,
-    "insar_n_points": 9,
     "exposure_score": 0.6,
     "triage_status": "orange",
     "cost_estimate_usd": 310000
@@ -198,8 +190,6 @@
     "vuln_score": 0.3,
     "damage_score": 0.22,
     "unosat_label": null,
-    "insar_disp_mm": 1.1,
-    "insar_n_points": 22,
     "exposure_score": 0.55,
     "triage_status": "yellow",
     "cost_estimate_usd": 0
@@ -244,8 +234,6 @@
     "vuln_score": 0.7,
     "damage_score": 0.18,
     "unosat_label": null,
-    "insar_disp_mm": null,
-    "insar_n_points": null,
     "exposure_score": 0.45,
     "triage_status": "yellow",
     "cost_estimate_usd": 0
@@ -290,8 +278,6 @@
     "vuln_score": 0.6,
     "damage_score": 0.12,
     "unosat_label": "no_visible_damage",
-    "insar_disp_mm": 0.4,
-    "insar_n_points": 17,
     "exposure_score": 0.2,
     "triage_status": "green",
     "cost_estimate_usd": 0
@@ -336,8 +322,6 @@
     "vuln_score": 0.4,
     "damage_score": 0.09,
     "unosat_label": null,
-    "insar_disp_mm": null,
-    "insar_n_points": null,
     "exposure_score": 0.1,
     "triage_status": "green",
     "cost_estimate_usd": 0
@@ -382,8 +366,6 @@
     "vuln_score": 0.55,
     "damage_score": null,
     "unosat_label": null,
-    "insar_disp_mm": null,
-    "insar_n_points": null,
     "exposure_score": null,
     "triage_status": null,
     "cost_estimate_usd": null
@@ -428,8 +410,6 @@
     "vuln_score": 0.25,
     "damage_score": 0.07,
     "unosat_label": "no_visible_damage",
-    "insar_disp_mm": -0.3,
-    "insar_n_points": 25,
     "exposure_score": 0.05,
     "triage_status": "green",
     "cost_estimate_usd": 0
